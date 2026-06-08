@@ -2,9 +2,11 @@
 num1= float(input("First number :"))
 num2 = float(input("Second number :"))
 operator = str(input("Enter the operation:"))
+oplist= [ "+" , "-" , "*" , "**", "/" , "//" , "%"]
 
-if operator != "+" and operator != "-" and operator != "*" and operator != "**" and operator != "/" and operator != "//" and operator != "%" : 
+if operator not in oplist : 
     print("INVALID OPERATOR") 
+    exit() # ends the program so the print at last isnt triggered
 elif operator == "+" : 
     result = num1 + num2
 elif operator == "-" : 
@@ -19,4 +21,4 @@ elif operator == "//" : # Round off the quotient
     result = num1 // num2
 elif operator == "%" : # gives the remainder 
     result = num1 % num2
-print(round(result, 4))
+print(f"{num1} {operator} {num2} = {round(result, 4)}") 
