@@ -1,7 +1,11 @@
 #Calculator with +-%/*//** operations
-num1= float(input("First number :"))
-num2 = float(input("Second number :"))
-operator = str(input("Enter the operation:"))
+try: 
+    num1= float((input("First number : "))) 
+    num2 = float((input("Second number : ")))
+except : # ends the program with only numbers allowed instead of showing an error and crashing the program
+    print("ONLY NUMBERS ALLOWED")
+    exit()
+operator = (input("Enter the operation: "))
 oplist= [ "+" , "-" , "*" , "**", "/" , "//" , "%"]
 
 if operator not in oplist : 
