@@ -25,4 +25,4 @@ elif operator == "//" : # Round off the quotient
     result = num1 // num2
 elif operator == "%" : # gives the remainder 
     result = num1 % num2
-print(f"{num1} {operator} {num2} = {round(result, 4)}") 
+print(f"{num1}{operator}{num2} = {result:,.3f}") 
